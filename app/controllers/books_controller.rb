@@ -4,7 +4,14 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @list = List.find(params[:])
+    @book = Book.find(params[:id])
+  end
+  
+  def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+    redirect_to "/books/#{book.id}"
+    
   end
   
   def create
@@ -18,6 +25,7 @@ class BooksController < ApplicationController
     book.destroy
     redirect_to '/books'
   end
+  
   def index
     @book = Book.new
     @books = Book.all
