@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*全体*/
 body{
   margin: 33px;
   line-height: 18px;
@@ -22,4 +22,9 @@ storong{
 
 h1{
   font-size: 26px;
+}
+
+.flash{
+  color: green;
+  margin: 33px;
 }
